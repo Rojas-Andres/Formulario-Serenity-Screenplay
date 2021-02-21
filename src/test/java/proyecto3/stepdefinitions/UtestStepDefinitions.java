@@ -7,10 +7,7 @@ import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import proyecto3.task.FirstPart;
-import proyecto3.task.OpenUp;
-import proyecto3.task.SecondPart;
-import proyecto3.task.ThirdPart;
+import proyecto3.task.*;
 //import sun.security.util.PendingException;
 
 public class UtestStepDefinitions {
@@ -49,14 +46,18 @@ public class UtestStepDefinitions {
         // Write code here that turns the phrase above into concrete actions
     }
 
-    @When("^he fill out the fourth part of the form$")
-    public void heFillOutTheFourthPartOfTheForm() {
+    @When("^he fill out the fourth part of the form password (.*)$")
+    public void heFillOutTheFourthPartOfTheForm(String password) {
         // Write code here that turns the phrase above into concrete actions
+        OnStage.theActorInTheSpotlight().attemptsTo(FourthPart.the(password));
+
     }
 
-    @Then("^he can log in$")
-    public void heCanLogIn() {
+    @Then("^he can log in email (.*) password (.*)$")
+    public void heCanLogIn(String email,String password) {
         // Write code here that turns the phrase above into concrete actions
+        OnStage.theActorInTheSpotlight().attemptsTo(Check.the(password));
+
     }
 
 }

@@ -10,6 +10,8 @@ import proyecto3.userinterface.FirstPageForm;
 import proyecto3.userinterface.ThirdPageForm;
 
 public class ThirdPart implements Task{
+    //Tengo pensando en algun momento que mediante al feature se le diga que mobile quiere pero aun no se como
+    //pasarle a la otra clase diciendole que use ese mobile que le envio en lugar de quemarlo en en xpath
     private String mobile;
 
     public ThirdPart(String mobile) {
