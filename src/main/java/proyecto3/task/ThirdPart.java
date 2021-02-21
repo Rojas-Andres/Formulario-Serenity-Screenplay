@@ -28,7 +28,8 @@ public class ThirdPart implements Task{
                 Click.on(ThirdPageForm.CLICK_MODEL),
                 Click.on(ThirdPageForm.CLICK_MODEL2),
                 Click.on(ThirdPageForm.CLICK_SO),
-                Click.on(ThirdPageForm.CLICK_SO2)
+                Click.on(ThirdPageForm.CLICK_SO2),
+                Click.on(ThirdPageForm.CLICK_NEXT)
                 //Enter.theValue().into().
                 //SelectFromOptions.byVisibleText("Lenovo").from(ThirdPageForm.CLICK)
 
