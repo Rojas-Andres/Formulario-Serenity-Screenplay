@@ -8,4 +8,4 @@ Scenario: Create new user on uTest page
     When he fill out the second part of the form ciudad Cali
     When he fill out the third part of the form mobile Alcatel
     When he fill out the fourth part of the form password t#%y1uF1nzvRI9AJK
-    Then he can log in
+    Then he can log in email andres20ka@gmail.com password t#%y1uF1nzvRI9AJK

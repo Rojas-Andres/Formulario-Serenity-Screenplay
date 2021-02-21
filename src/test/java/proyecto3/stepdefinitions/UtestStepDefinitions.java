@@ -56,7 +56,7 @@ public class UtestStepDefinitions {
     @Then("^he can log in email (.*) password (.*)$")
     public void heCanLogIn(String email,String password) {
         // Write code here that turns the phrase above into concrete actions
-        OnStage.theActorInTheSpotlight().attemptsTo(Check.the(password));
+        OnStage.theActorInTheSpotlight().attemptsTo(Check.the(email,password));
 
     }
 

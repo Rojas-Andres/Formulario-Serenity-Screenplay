@@ -27,7 +27,8 @@ public class FourthPart implements Task {
                 Enter.theValue(password).into(FourthPageForm.PASSWORD),
                 Enter.theValue(password).into(FourthPageForm.PASSWORD2),
                 Click.on(FourthPageForm.CLICK_USE_TERM),
-                Click.on(FourthPageForm.CLICK_PRIVACITY)
+                Click.on(FourthPageForm.CLICK_PRIVACITY),
+                Click.on(FourthPageForm.CLICK_END_FORM)
 
                 );
     }
