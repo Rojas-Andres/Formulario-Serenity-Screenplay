@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Utest" skipped="0" tests="1" time="102.04" timestamp="2021-02-20 10:19:17"><testcase name="Create new user on uTest page"><error type="java.lang.NullPointerException"/><system-err>null&#13;
-proyecto3.task.Check.performAs(Check.java:30)&#13;
-proyecto3.stepdefinitions.UtestStepDefinitions.heCanLogIn(UtestStepDefinitions.java:59)&#13;
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Utest" skipped="0" tests="1" time="85.78" timestamp="2021-02-23 05:48:55"><testcase name="Create new user on uTest page"><failure message="Expected enabled element was not enabled" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled</failure><system-err>Expected enabled element was not enabled&#13;
+proyecto3.task.Check.performAs(Check.java:27)&#13;
+proyecto3.stepdefinitions.UtestStepDefinitions.heCanLogIn(UtestStepDefinitions.java:65)&#13;
 cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
 </system-err></testcase></testsuite>

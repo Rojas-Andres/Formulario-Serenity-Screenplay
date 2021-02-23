@@ -13,13 +13,13 @@ import org.openqa.selenium.remote.server.handler.ClearElement;
 import proyecto3.userinterface.SecondPageForm;
 
 public class SecondPart implements Task{
-    private String ciudad;
-    public SecondPart(String ciudad) {
-        this.ciudad=ciudad;
+    private String strCity;
+    public SecondPart(String strCity) {
+        this.strCity=strCity;
     }
 
-    public static SecondPart the(String ciudad){
-        return Tasks.instrumented(SecondPart.class,ciudad);
+    public static SecondPart the(String strCity){
+        return Tasks.instrumented(SecondPart.class,strCity);
     }
 
 

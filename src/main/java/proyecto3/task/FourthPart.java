@@ -10,22 +10,22 @@ import proyecto3.userinterface.FourthPageForm;
 import proyecto3.userinterface.ThirdPageForm;
 
 public class FourthPart implements Task {
-    private String password;
+    private String strPassword;
 
-    public FourthPart(String password) {
-        this.password=password;
+    public FourthPart(String strPassword) {
+        this.strPassword=strPassword;
     }
 
-    public static FourthPart the(String password){
-        return Tasks.instrumented(FourthPart.class,password);
+    public static FourthPart the(String strPassword){
+        return Tasks.instrumented(FourthPart.class,strPassword);
     }
 
 
     @Override
     public <T extends Actor> void performAs(T actor){
         actor.attemptsTo(
-                Enter.theValue(password).into(FourthPageForm.PASSWORD),
-                Enter.theValue(password).into(FourthPageForm.PASSWORD2),
+                Enter.theValue(strPassword).into(FourthPageForm.PASSWORD),
+                Enter.theValue(strPassword).into(FourthPageForm.PASSWORD2),
                 Click.on(FourthPageForm.CLICK_USE_TERM),
                 Click.on(FourthPageForm.CLICK_PRIVACITY),
                 Click.on(FourthPageForm.CLICK_END_FORM)

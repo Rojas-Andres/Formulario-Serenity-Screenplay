@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1m43.37s</div>
+<div class="counter">1m27.37s</div>
 <p>duration</p>
 </div>
 </td>
@@ -76,17 +76,12 @@
 <a name="Create new user on uTest page"></a>
 <h3 class="failures">Create new user on uTest page</h3>
 <span class="code">
-<pre>java.lang.NullPointerException
-	at net.serenitybdd.core.injectors.EnvironmentDependencyInjector.matchingFieldsIn(EnvironmentDependencyInjector.java:88)
-	at net.serenitybdd.core.injectors.EnvironmentDependencyInjector.injectDependenciesInto(EnvironmentDependencyInjector.java:32)
-	at net.thucydides.core.steps.PageObjectDependencyInjector.injectDependenciesInto(PageObjectDependencyInjector.java:28)
-	at net.thucydides.core.steps.StepFactory.injectOtherDependenciesInto(StepFactory.java:181)
-	at net.thucydides.core.steps.StepFactory.instantiateUniqueStepLibraryFor(StepFactory.java:198)
-	at net.thucydides.core.steps.StepFactory.getUniqueStepLibraryFor(StepFactory.java:130)
-	at net.serenitybdd.screenplay.Tasks.instrumented(Tasks.java:12)
-	at net.serenitybdd.screenplay.actions.Enter.into(Enter.java:32)
-	at proyecto3.task.Check.performAs(Check.java:30)
-	at proyecto3.task.Check$ByteBuddy$CFBMYD6f.performAs$accessor$U5Loh1zO(Unknown Source)
+<pre>net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException: Expected enabled element was not enabled
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilEnabled(WebElementFacadeImpl.java:1149)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementAvailable(WebElementFacadeImpl.java:954)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1229)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget.performAs(ClickOnTarget.java:13)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$F5YVQUzm.performAs$accessor$izokar48(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -97,126 +92,12 @@
 	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:180)
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:167)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:75)
-	at proyecto3.task.Check$ByteBuddy$CFBMYD6f.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$F5YVQUzm.performAs(Unknown Source)
 	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:233)
 	at net.serenitybdd.screenplay.Actor.perform(Actor.java:214)
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:171)
-	at proyecto3.stepdefinitions.UtestStepDefinitions.heCanLogIn(UtestStepDefinitions.java:59)
-	at ✽.he can log in email andres20ka@gmail.com password t#%y1uF1nzvRI9AJK(src/test/resources/features/uTest.feature:11)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
-<h2>Tests</h2>
-<table>
-<thead>
-<tr>
-<th>Test</th>
-<th>Duration</th>
-<th>Result</th>
-</tr>
-</thead>
-<tr>
-<td class="failures">Create new user on uTest page</td>
-<td class="failures">1m43.37s</td>
-<td class="failures">failed</td>
-</tr>
-</table>
-</div>
-<div id="tab2" class="tab">
-<h2>Standard error</h2>
-<span class="code">
-<pre>[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@74695cb
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@455b83d6
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@1fa03fd5
-feb 20, 2021 10:19:20 PM org.openqa.selenium.remote.DesiredCapabilities chrome
-INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
-[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors..., --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., platform: ANY, version: }
-Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 7950
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-feb 20, 2021 10:19:28 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFORMACIÓN: Detected dialect: W3C
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@4f9ba5b1
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@635745c0
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@148d3f79
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@30658f6c
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@211c773f
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@54ea8d9e
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@5acbe533
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@21bbda99
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@7ed58725
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@48617ba8
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@4a2354fc
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@445f50f0
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@7f38bc23
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@1c54cff9
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@59050e8b
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@62d9af24
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@4dc72c84
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@5b972015
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@7dcd4d74
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo, Andres clicks on Escojemos el modelo]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@3e6444a6
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo, Andres clicks on Escojemos el modelo, Andres clicks on Abrimos para escoger el so]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@11f4e037
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo, Andres clicks on Escojemos el modelo, Andres clicks on Abrimos para escoger el so, Andres clicks on Escogemos el sistema operativo]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@71f34004
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo, Andres clicks on Escojemos el modelo, Andres clicks on Abrimos para escoger el so, Andres clicks on Escogemos el sistema operativo, Andres clicks on Siguiente parte del formulario]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo, Andres clicks on Escojemos el modelo, Andres clicks on Abrimos para escoger el so, Andres clicks on Escogemos el sistema operativo, Andres clicks on Siguiente parte del formulario]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo, Andres clicks on Escojemos el modelo, Andres clicks on Abrimos para escoger el so, Andres clicks on Escogemos el sistema operativo, Andres clicks on Siguiente parte del formulario]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@31f85c37
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@71d34180
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@3dfa5459
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo, Andres clicks on Escojemos el modelo, Andres clicks on Abrimos para escoger el so, Andres clicks on Escogemos el sistema operativo, Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password t#%y1uF1nzvRI9AJK [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@fc55246
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo, Andres clicks on Escojemos el modelo, Andres clicks on Abrimos para escoger el so, Andres clicks on Escogemos el sistema operativo, Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password t#%y1uF1nzvRI9AJK [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@4ade4130
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo, Andres clicks on Escojemos el modelo, Andres clicks on Abrimos para escoger el so, Andres clicks on Escogemos el sistema operativo, Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password t#%y1uF1nzvRI9AJK [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña, Andres clicks on Aceptamos terminos]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@2148c177
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo, Andres clicks on Escojemos el modelo, Andres clicks on Abrimos para escoger el so, Andres clicks on Escogemos el sistema operativo, Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password t#%y1uF1nzvRI9AJK [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña, Andres clicks on Aceptamos terminos, Andres clicks on Aceptamos terminos]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@6a7a412b
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo, Andres clicks on Escojemos el modelo, Andres clicks on Abrimos para escoger el so, Andres clicks on Escogemos el sistema operativo, Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password t#%y1uF1nzvRI9AJK [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña, Andres clicks on Aceptamos terminos, Andres clicks on Aceptamos terminos, Andres clicks on Terminamos el Formulario]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo, Andres clicks on Escojemos el modelo, Andres clicks on Abrimos para escoger el so, Andres clicks on Escogemos el sistema operativo, Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password t#%y1uF1nzvRI9AJK [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña, Andres clicks on Aceptamos terminos, Andres clicks on Aceptamos terminos, Andres clicks on Terminamos el Formulario]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo, Andres clicks on Escojemos el modelo, Andres clicks on Abrimos para escoger el so, Andres clicks on Escogemos el sistema operativo, Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password t#%y1uF1nzvRI9AJK [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña, Andres clicks on Aceptamos terminos, Andres clicks on Aceptamos terminos, Andres clicks on Terminamos el Formulario]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@780c0054
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@3b34329e
-[Test worker] ERROR net.thucydides.core.steps.StepFactory - Cannot create StepFactory for  class net.serenitybdd.screenplay.actions.EnterValueIntoTarget
-java.lang.reflect.InvocationTargetException
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at net.thucydides.core.steps.StepFactory.immutableStepLibrary(StepFactory.java:259)
-	at net.thucydides.core.steps.StepFactory.createProxyStepLibrary(StepFactory.java:223)
-	at net.thucydides.core.steps.StepFactory.instantiateUniqueStepLibraryFor(StepFactory.java:194)
-	at net.thucydides.core.steps.StepFactory.getUniqueStepLibraryFor(StepFactory.java:130)
-	at net.serenitybdd.screenplay.Tasks.instrumented(Tasks.java:12)
-	at net.serenitybdd.screenplay.actions.Enter.into(Enter.java:32)
-	at proyecto3.task.Check.performAs(Check.java:30)
-	at proyecto3.task.Check$ByteBuddy$CFBMYD6f.performAs$accessor$U5Loh1zO(Unknown Source)
+	at proyecto3.task.Check.performAs(Check.java:27)
+	at proyecto3.task.Check$ByteBuddy$zeJMqOyK.performAs$accessor$d0I2opcB(Unknown Source)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -227,11 +108,51 @@ java.lang.reflect.InvocationTargetException
 	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:180)
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:167)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:75)
-	at proyecto3.task.Check$ByteBuddy$CFBMYD6f.performAs(Unknown Source)
+	at proyecto3.task.Check$ByteBuddy$zeJMqOyK.performAs(Unknown Source)
 	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:233)
 	at net.serenitybdd.screenplay.Actor.perform(Actor.java:214)
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:171)
-	at proyecto3.stepdefinitions.UtestStepDefinitions.heCanLogIn(UtestStepDefinitions.java:59)
+	at proyecto3.stepdefinitions.UtestStepDefinitions.heCanLogIn(UtestStepDefinitions.java:65)
+	at ✽.he can log in email(src/test/resources/features/uTest.feature:19)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for By.xpath: //div[@class='unauthenticated-nav-bar__links navbar-right hidden-sm hidden-xs']//a[contains(text(),'Log In')] to be enabled (tried for 5 second(s) with 100 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilEnabled(WebElementFacadeImpl.java:1146)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementAvailable(WebElementFacadeImpl.java:954)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1229)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget.performAs(ClickOnTarget.java:13)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$F5YVQUzm.performAs$accessor$izokar48(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:471)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:451)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:424)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:180)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:167)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:75)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$F5YVQUzm.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:233)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:214)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:171)
+	at proyecto3.task.Check.performAs(Check.java:27)
+	at proyecto3.task.Check$ByteBuddy$zeJMqOyK.performAs$accessor$d0I2opcB(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:471)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:451)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:424)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:180)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:167)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:75)
+	at proyecto3.task.Check$ByteBuddy$zeJMqOyK.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:233)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:214)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:171)
+	at proyecto3.stepdefinitions.UtestStepDefinitions.heCanLogIn(UtestStepDefinitions.java:65)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -294,23 +215,312 @@ java.lang.reflect.InvocationTargetException
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.lang.NullPointerException
-	at net.serenitybdd.screenplay.actions.type.RenderEnteredText.lambda$getTextAsStringFor$0(RenderEnteredText.java:40)
-	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
-	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
-	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
-	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
-	at net.serenitybdd.screenplay.actions.type.RenderEnteredText.getTextAsStringFor(RenderEnteredText.java:41)
-	at net.serenitybdd.screenplay.actions.EnterValue.&lt;init&gt;(EnterValue.java:22)
-	at net.serenitybdd.screenplay.actions.EnterValueIntoTarget.&lt;init&gt;(EnterValueIntoTarget.java:12)
-	at net.serenitybdd.screenplay.actions.EnterValueIntoTarget$ByteBuddy$D30k31kR.&lt;init&gt;(Unknown Source)
-	... 89 more
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - testFinished: Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo, Andres clicks on Escojemos el modelo, Andres clicks on Abrimos para escoger el so, Andres clicks on Escogemos el sistema operativo, Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password t#%y1uF1nzvRI9AJK [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña, Andres clicks on Aceptamos terminos, Andres clicks on Aceptamos terminos, Andres clicks on Terminamos el Formulario]], Then he can log in email andres20ka@gmail.com password t#%y1uF1nzvRI9AJK [Andres check]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - TestOutcomes: [Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo, Andres clicks on Escojemos el modelo, Andres clicks on Abrimos para escoger el so, Andres clicks on Escogemos el sistema operativo, Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password t#%y1uF1nzvRI9AJK [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña, Andres clicks on Aceptamos terminos, Andres clicks on Aceptamos terminos, Andres clicks on Terminamos el Formulario]], Then he can log in email andres20ka@gmail.com password t#%y1uF1nzvRI9AJK [Andres check]]
-[Test worker] WARN net.thucydides.core.steps.BaseStepListener - Final testOutcomes: [Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000 [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad Cali [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile Alcatel [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on Escojemos el celular, Andres clicks on Abrimos para escoger el modelo, Andres clicks on Escojemos el modelo, Andres clicks on Abrimos para escoger el so, Andres clicks on Escogemos el sistema operativo, Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password t#%y1uF1nzvRI9AJK [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña, Andres clicks on Aceptamos terminos, Andres clicks on Aceptamos terminos, Andres clicks on Terminamos el Formulario]], Then he can log in email andres20ka@gmail.com password t#%y1uF1nzvRI9AJK [Andres check]]
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class='unauthenticated-nav-bar__links navbar-right hidden-sm hidden-xs']//a[contains(text(),'Log In')]&quot;}
+  (Session info: chrome=88.0.4324.182)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-CURJO95', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\ASUS\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:54278}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d083bec611bf64f39dd7506373fcacbf
+*** Element info: {Using=xpath, value=//div[@class='unauthenticated-nav-bar__links navbar-right hidden-sm hidden-xs']//a[contains(text(),'Log In')]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at net.thucydides.core.webdriver.WebDriverFacade.findElement(WebDriverFacade.java:222)
+	at net.serenitybdd.core.pages.WebElementResolverByLocator.resolveForDriver(WebElementResolverByLocator.java:18)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:221)
+	at net.serenitybdd.core.pages.WebElementExpectations$3.apply(WebElementExpectations.java:63)
+	at net.serenitybdd.core.pages.WebElementExpectations$3.apply(WebElementExpectations.java:55)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 98 more
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">Create new user on uTest page</td>
+<td class="failures">1m27.37s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@3a93b193
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@4ef5e5cd
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@63be15dd
+feb 23, 2021 5:48:56 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --start-maximized;--test-ty..., goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors..., --disable-popup-blocking, --disable-default-apps, --disable-extensions-file-a..., --incognito, --disable-infobars, --disable-gpu], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., platform: ANY, version: }
+Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 31433
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+feb 23, 2021 5:49:01 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@108cc742
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@759a6a37
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@195678a7
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@6cf16eb9
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@3b694814
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@7b050c55
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@704c9aac
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@180caa57
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@2eaeb14d
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@14af0dd5
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@78cc8dc1
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@1dd254c
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@60ece8a9
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@345c1d7d
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@4d815c0
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@708b5492
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@47c17cdd
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')]]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@766265d6
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@6f91070d
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iPhone 3GS')]]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@1e2c1478
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iPhone 3GS')], Andres clicks on Abrimos para escoger el so]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@7daddbb1
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iPhone 3GS')], Andres clicks on Abrimos para escoger el so, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iOS 3.0')]]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@1fbe62f7
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iPhone 3GS')], Andres clicks on Abrimos para escoger el so, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iOS 3.0')], Andres clicks on Siguiente parte del formulario]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iPhone 3GS')], Andres clicks on Abrimos para escoger el so, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iOS 3.0')], Andres clicks on Siguiente parte del formulario]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iPhone 3GS')], Andres clicks on Abrimos para escoger el so, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iOS 3.0')], Andres clicks on Siguiente parte del formulario]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@1ea4da73
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@782dd45
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@1e6e9b03
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iPhone 3GS')], Andres clicks on Abrimos para escoger el so, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iOS 3.0')], Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password
+| strPassword |
+| t#%y1uF1nzvRI9AJK | [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@33f9614d
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iPhone 3GS')], Andres clicks on Abrimos para escoger el so, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iOS 3.0')], Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password
+| strPassword |
+| t#%y1uF1nzvRI9AJK | [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@20628045
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iPhone 3GS')], Andres clicks on Abrimos para escoger el so, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iOS 3.0')], Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password
+| strPassword |
+| t#%y1uF1nzvRI9AJK | [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña, Andres clicks on Aceptamos terminos]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@4f368355
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iPhone 3GS')], Andres clicks on Abrimos para escoger el so, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iOS 3.0')], Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password
+| strPassword |
+| t#%y1uF1nzvRI9AJK | [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña, Andres clicks on Aceptamos terminos, Andres clicks on Aceptamos terminos]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@39be05d2
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iPhone 3GS')], Andres clicks on Abrimos para escoger el so, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iOS 3.0')], Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password
+| strPassword |
+| t#%y1uF1nzvRI9AJK | [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña, Andres clicks on Aceptamos terminos, Andres clicks on Aceptamos terminos, Andres clicks on Terminamos el Formulario]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iPhone 3GS')], Andres clicks on Abrimos para escoger el so, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iOS 3.0')], Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password
+| strPassword |
+| t#%y1uF1nzvRI9AJK | [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña, Andres clicks on Aceptamos terminos, Andres clicks on Aceptamos terminos, Andres clicks on Terminamos el Formulario]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepFinished: current outcome:Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iPhone 3GS')], Andres clicks on Abrimos para escoger el so, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iOS 3.0')], Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password
+| strPassword |
+| t#%y1uF1nzvRI9AJK | [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña, Andres clicks on Aceptamos terminos, Andres clicks on Aceptamos terminos, Andres clicks on Terminamos el Formulario]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@24e036ee
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@d6ed3d3
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - stepStarted: net.thucydides.core.steps.ExecutedStepDescription@30067b0e
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - testFinished: Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iPhone 3GS')], Andres clicks on Abrimos para escoger el so, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iOS 3.0')], Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password
+| strPassword |
+| t#%y1uF1nzvRI9AJK | [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña, Andres clicks on Aceptamos terminos, Andres clicks on Aceptamos terminos, Andres clicks on Terminamos el Formulario]], Then he can log in email
+| strEmail | strPassword |
+| andres20ka@gmail.com | t#%y1uF1nzvRI9AJK | [Andres check [Andres clicks on Click en LOG IN ]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - TestOutcomes: [Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iPhone 3GS')], Andres clicks on Abrimos para escoger el so, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iOS 3.0')], Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password
+| strPassword |
+| t#%y1uF1nzvRI9AJK | [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña, Andres clicks on Aceptamos terminos, Andres clicks on Aceptamos terminos, Andres clicks on Terminamos el Formulario]], Then he can log in email
+| strEmail | strPassword |
+| andres20ka@gmail.com | t#%y1uF1nzvRI9AJK | [Andres check [Andres clicks on Click en LOG IN ]]]
+[Test worker] WARN net.thucydides.core.steps.BaseStepListener - Final testOutcomes: [Create new user on uTest page:Given Andres wants to fill out a form to register [Andres open up [Andres opens the Utest page]], When I have entered the form and fill out the first part
+| strName | strLastname | strEmail | strMonth | strDay | strYear |
+| Andres | Rojas | andres20ka@gmail.com | April | 20 | 2000 | [Andres first part [Andres clicks on Click para iniciar el formulario, Andres enters 'Andres' into Digitamos el nombre, Andres enters 'Rojas' into Digitamos el apellido, Andres enters 'andres20ka@gmail.com' into Digitamos el correo, Andres select April on Escogemos el mes, Andres select 20 on Escogemos el dia, Andres select 2000 on Escogemos el año, Andres clicks on Siguiente parte]], When he fill out the second part of the form ciudad
+| strCity |
+| Cali | [Andres second part [Andres clicks on Siguiente parte]], When he fill out the third part of the form mobile
+| strMobile | strModel | strSo |
+| Apple | iPhone 3GS | iOS 3.0 | [Andres third part [Andres clicks on Abrimos para escoger el celular, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'Apple')], Andres clicks on Abrimos para escoger el modelo, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iPhone 3GS')], Andres clicks on Abrimos para escoger el so, Andres clicks on //ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'iOS 3.0')], Andres clicks on Siguiente parte del formulario]], When he fill out the fourth part of the form password
+| strPassword |
+| t#%y1uF1nzvRI9AJK | [Andres fourth part [Andres enters 't#%y1uF1nzvRI9AJK' into Elegimos la contraseña, Andres enters 't#%y1uF1nzvRI9AJK' into Confirmamos la contraseña, Andres clicks on Aceptamos terminos, Andres clicks on Aceptamos terminos, Andres clicks on Terminamos el Formulario]], Then he can log in email
+| strEmail | strPassword |
+| andres20ka@gmail.com | t#%y1uF1nzvRI9AJK | [Andres check [Andres clicks on Click en LOG IN ]]]
 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - 
            __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
   _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
@@ -319,10 +529,10 @@ Caused by: java.lang.NullPointerException
  (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
           \_\                                                            
 
-TEST FAILED WITH ERROR: Create new user on uTest page
----------------------------------------------------------------------
-[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - TEST FAILED AT STEP Andres check
-[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - 
+TEST FAILED: Create new user on uTest page
+--------------------------------------------------------------------------
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - TEST FAILED AT STEP Andres clicks on Click en LOG IN
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - Expected enabled element was not enabled
 </pre>
 </span>
 </div>
@@ -334,7 +544,7 @@ TEST FAILED WITH ERROR: Create new user on uTest page
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.7</a> at 20/02/2021 10:21:09 PM</p>
+<a href="http://www.gradle.org">Gradle 6.7</a> at 23/02/2021 05:50:31 PM</p>
 </div>
 </div>
 </body>

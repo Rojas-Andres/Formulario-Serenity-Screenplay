@@ -1,5 +1,13 @@
 proyecto3/task/Check.java
  proyecto3.task.Check
+proyecto3/model/ProyectoData.java
+ proyecto3.model.ProyectoData
+proyecto3/userinterface/CheckPage.java
+ proyecto3.userinterface.CheckPage
+proyecto3/userinterface/FourthPageForm.java
+ proyecto3.userinterface.FourthPageForm
+proyecto3/userinterface/ThirdPageForm.java
+ proyecto3.userinterface.ThirdPageForm
 proyecto3/task/OpenUp.java
  proyecto3.task.OpenUp
 proyecto3/userinterface/UtestPage.java
@@ -10,12 +18,6 @@ proyecto3/task/ThirdPart.java
  proyecto3.task.ThirdPart
 proyecto3/userinterface/FirstPageForm.java
  proyecto3.userinterface.FirstPageForm
-proyecto3/userinterface/CheckPage.java
- proyecto3.userinterface.CheckPage
-proyecto3/userinterface/FourthPageForm.java
- proyecto3.userinterface.FourthPageForm
-proyecto3/userinterface/ThirdPageForm.java
- proyecto3.userinterface.ThirdPageForm
 proyecto3/task/FourthPart.java
  proyecto3.task.FourthPart
 proyecto3/userinterface/SecondPageForm.java

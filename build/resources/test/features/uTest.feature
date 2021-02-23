@@ -4,8 +4,18 @@ Feature: Utest
   @scenario1
 Scenario: Create new user on uTest page
     Given Andres wants to fill out a form to register
-    When I have entered the form and fill out the first part name Andres lastname Rojas email andres20ka@gmail.com month April day 20 year 2000
-    When he fill out the second part of the form ciudad Cali
-    When he fill out the third part of the form mobile Alcatel
-    When he fill out the fourth part of the form password t#%y1uF1nzvRI9AJK
-    Then he can log in email andres20ka@gmail.com password t#%y1uF1nzvRI9AJK
+    When I have entered the form and fill out the first part
+    | strName | strLastname  | strEmail               | strMonth | strDay | strYear |
+    | Andres  | Rojas        | andres20ka@gmail.com   | April    | 20     | 2000    |
+    When he fill out the second part of the form ciudad
+    | strCity   |
+    | Cali      |
+    When he fill out the third part of the form mobile
+    | strMobile   | strModel   | strSo   |
+    | Apple       | iPhone 3GS | iOS 3.0 |
+    When he fill out the fourth part of the form password
+    | strPassword |
+    | t#%y1uF1nzvRI9AJK |
+    Then he can log in email
+    | strEmail             | strPassword       |
+    | andres20ka@gmail.com | t#%y1uF1nzvRI9AJK |

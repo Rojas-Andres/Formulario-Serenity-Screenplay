@@ -12,25 +12,33 @@ import proyecto3.userinterface.ThirdPageForm;
 public class ThirdPart implements Task{
     //Tengo pensando en algun momento que mediante al feature se le diga que mobile quiere pero aun no se como
     //pasarle a la otra clase diciendole que use ese mobile que le envio en lugar de quemarlo en en xpath
-    private String mobile;
-
-    public ThirdPart(String mobile) {
-        this.mobile=mobile;
+    private String strMobile;
+    private String strModel;
+    private String strSo;
+    public ThirdPart(String strMobile,String strModel,String strSo) {
+        this.strMobile=strMobile;
+        this.strModel=strModel;
+        this.strSo=strSo;
     }
 
-    public static ThirdPart the(String mobile){
-        return Tasks.instrumented(ThirdPart.class,mobile);
+    public static ThirdPart the(String strMobile, String strModel,String strSo){
+        return Tasks.instrumented(ThirdPart.class,strMobile,strModel,strSo);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor){
         actor.attemptsTo(
+
                 Click.on(ThirdPageForm.CLICK),
-                Click.on(ThirdPageForm.CLICK_2),
+
+                //Click.on(ThirdPageForm.CLICK_2),
+                Click.on("//ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'"+ strMobile +"')]"),
                 Click.on(ThirdPageForm.CLICK_MODEL),
-                Click.on(ThirdPageForm.CLICK_MODEL2),
+                //Click.on(ThirdPageForm.CLICK_MODEL2),
+                Click.on("//ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'"+ strModel+"')]"),
                 Click.on(ThirdPageForm.CLICK_SO),
-                Click.on(ThirdPageForm.CLICK_SO2),
+                //Click.on(ThirdPageForm.CLICK_SO2),
+                Click.on("//ul[@class='ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu']//span[@class='ui-select-choices-row-inner']//div[contains(text(),'"+ strSo+"')]"),
                 Click.on(ThirdPageForm.CLICK_NEXT)
                 //Enter.theValue().into().
                 //SelectFromOptions.byVisibleText("Lenovo").from(ThirdPageForm.CLICK)
