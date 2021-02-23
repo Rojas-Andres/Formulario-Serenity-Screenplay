@@ -9,7 +9,8 @@ public class ProyectoData {
     private String strYear;
     private String strMobile;
     private String strModel;
-
+    private String strSo;
+    
     public String getStrSo() {
         return strSo;
     }
@@ -18,7 +19,7 @@ public class ProyectoData {
         this.strSo = strSo;
     }
 
-    private String strSo;
+
 
     public String getStrModel() {
         return strModel;
