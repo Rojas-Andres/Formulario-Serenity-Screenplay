@@ -10,7 +10,20 @@ public class ProyectoData {
     private String strMobile;
     private String strModel;
     private String strSo;
-    
+    private String strZipCode;
+
+    private String strPassword;
+    private String strCity;
+
+    public String getStrZipCode() {
+        return strZipCode;
+    }
+
+    public void setStrZipCode(String strZipCode) {
+        this.strZipCode = strZipCode;
+    }
+
+
     public String getStrSo() {
         return strSo;
     }
@@ -29,8 +42,7 @@ public class ProyectoData {
         this.strModel = strModel;
     }
 
-    private String strPassword;
-    private String strCity;
+
 
     public String getStrName() {
         return strName;

@@ -39,7 +39,7 @@ public class UtestStepDefinitions {
     @When("^he fill out the second part of the form ciudad$")
     public void heFillOutTheSecondPartOfTheForm(List<ProyectoData> proyecto3Data) throws Exception{
     // Write code here that turns the phrase above into concrete actions
-        OnStage.theActorInTheSpotlight().attemptsTo(SecondPart.the(proyecto3Data.get(0).getStrCity()));
+        OnStage.theActorInTheSpotlight().attemptsTo(SecondPart.the(proyecto3Data.get(0).getStrCity(),proyecto3Data.get(0).getStrZipCode()));
 
 
     }

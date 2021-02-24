@@ -8,8 +8,8 @@ Scenario: Create new user on uTest page
     | strName | strLastname  | strEmail               | strMonth | strDay | strYear |
     | Andres  | Rojas        | andres20ka@gmail.com   | April    | 20     | 2000    |
     When he fill out the second part of the form ciudad
-    | strCity   |
-    | Cali      |
+    | strCity     | strZipCode |
+    | Limari      | 78520      |
     When he fill out the third part of the form mobile
     | strMobile   | strModel   | strSo   |
     | Apple       | iPhone 3GS | iOS 3.0 |
